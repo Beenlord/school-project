@@ -1,9 +1,18 @@
 <template>
-  <Tutorial/>
+  <div class="IndexPage">
+  </div>
 </template>
 
 <script>
+import commonMixin from '@/mixins/common.js';
+
 export default {
-  name: 'IndexPage'
+  mixins: [
+    commonMixin(),
+  ],
 }
 </script>
+
+<style lang="scss">
+.IndexPage {}
+</style>

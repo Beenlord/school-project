@@ -16,10 +16,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/styles/main'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/all'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -27,6 +29,12 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['@/modules/icons', [
+      {
+        folder: './assets/icons',
+        result: './components/dynamic/Icons.vue',
+      },
+    ]],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -35,5 +43,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true,
+    },
   }
 }
