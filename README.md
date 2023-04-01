@@ -1,4 +1,4 @@
-# SCH Project
+# 📚 SCH Project
 
 > https://beenlord.github.io/school-project/
 
