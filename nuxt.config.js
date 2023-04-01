@@ -1,5 +1,4 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'SCH Project',
     htmlAttrs: {
@@ -14,20 +13,22 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  // Можно подключать другие css модули из npm
+  // просто указав имя модуля.
   css: [
     '@/assets/styles/main'
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // Можно указать локальные плагины, которые
+  // будут вызываться при запуске.
   plugins: [
     '@/plugins/all'
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto import components.
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  // Modules for dev and build (recommended)
   buildModules: [
     ['@/modules/icons', [
       {
@@ -37,16 +38,23 @@ export default {
     ]],
   ],
 
+  // Обработчики на стороне сервера
+  serverMiddleware: [
+    {
+      path: '/api',
+      handler: '@/server/application.js',
+    },
+  ],
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     splitChunks: {
       layouts: true,
       pages: true,
       commons: true,
     },
-  }
-}
+  },
+};
