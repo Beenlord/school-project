@@ -1,8 +1,4 @@
 export default {
-  server: {
-    port: 10327,
-    host: '0.0.0.0',
-  },
   head: {
     title: 'SCH Project',
     htmlAttrs: {
@@ -41,6 +37,10 @@ export default {
       },
     ]],
   ],
+
+  router: {
+    base: '/school-project/',
+  },
 
   // Обработчики на стороне сервера
   serverMiddleware: [
