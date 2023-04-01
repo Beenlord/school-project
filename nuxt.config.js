@@ -1,4 +1,8 @@
 export default {
+  server: {
+    port: 10327,
+    host: '0.0.0.0',
+  },
   head: {
     title: 'SCH Project',
     htmlAttrs: {
@@ -41,7 +45,7 @@ export default {
   // Обработчики на стороне сервера
   serverMiddleware: [
     {
-      path: '/api?',
+      path: '/api',
       handler: '@/server/application.js',
     },
   ],
