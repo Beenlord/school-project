@@ -1,19 +1,20 @@
 <template>
-  <b-container class="IndexPage">
-	</b-container>
+	<div class="RegistrationPage">
+	</div>
 </template>
 
 <script>
 import commonMixin from '@/mixins/common.js';
 
 export default {
-  mixins: [
-    commonMixin(),
-  ],
+	mixins: [
+		commonMixin({
+			layout: 'auth',
+		}),
+	],
 }
 </script>
 
 <style lang="scss">
-.IndexPage {
-}
+.IndexPage {}
 </style>

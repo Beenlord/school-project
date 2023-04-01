@@ -2,7 +2,6 @@
   <div class="DefaultLayout">
     <Nuxt />
     <Icons />
-    <Icon class="project-logo" id="logo" />
   </div>
 </template>
 
@@ -15,7 +14,6 @@ export default {
   },
   data: () => {
     return {
-      curtain: false,
     };
   }
 };
@@ -23,10 +21,5 @@ export default {
 
 <style lang="scss">
 .DefaultLayout {
-  .project-logo {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 </style>

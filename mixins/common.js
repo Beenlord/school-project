@@ -1,15 +1,10 @@
-import defaultLayout from '@/layouts/default.vue';
-
 function commonMixin(opt = {}) {
   opt = {
-    layout: 'defaultLayout',
+    layout: 'default',
     ...opt,
   };
   return {
-    layout: opt.layout,
-    components: {
-      defaultLayout,
-    },
+		layout: opt.layout,
   };
 }
 
