@@ -2,8 +2,6 @@
 
 > https://beenlord.github.io/school-project/
 
-## Build Setup
-
 ```bash
 # install dependencies
 $ npm install
