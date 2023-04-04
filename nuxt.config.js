@@ -1,3 +1,4 @@
+// noinspection JSLastCommaInArrayLiteral,JSLastCommaInObjectLiteral
 export default {
   head: {
     title: 'SCH Project',
@@ -22,7 +23,7 @@ export default {
   // Можно указать локальные плагины, которые
   // будут вызываться при запуске.
   plugins: [
-    '@/plugins/all'
+    '@/plugins/common'
   ],
 
   // Auto import components.
@@ -38,20 +39,22 @@ export default {
     ]],
   ],
 
-  router: {
-    base: '/school-project/',
-  },
+  // Настройка роутера
+  // router: {
+  //   base: '/school-project/',
+  // },
 
   // Обработчики на стороне сервера
-  serverMiddleware: [
-    {
-      path: '/school-project/api',
-      handler: '@/server/application.js',
-    },
-  ],
+  // serverMiddleware: [
+  //   {
+  //     path: '/school-project/api',
+  //     handler: '@/server/application.js',
+  //   },
+  // ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+		'bootstrap-vue/nuxt',
   ],
 
   build: {
