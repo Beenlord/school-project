@@ -1,8 +1,9 @@
 <template>
-  <div class="DefaultLayout">
-    <Nuxt />
-    <Icons />
-  </div>
+	<div class="DefaultLayout">
+		<Nuxt />
+		<Icons />
+		<Preloader />
+	</div>
 </template>
 
 <script>

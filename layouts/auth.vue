@@ -2,6 +2,7 @@
 	<div class="AuthLayout">
 		<Nuxt />
 		<Icons />
+		<Preloader />
 	</div>
 </template>
 
