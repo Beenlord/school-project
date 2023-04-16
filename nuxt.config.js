@@ -45,12 +45,12 @@ export default {
   // },
 
   // Обработчики на стороне сервера
-  // serverMiddleware: [
-  //   {
-  //     path: '/school-project/api',
-  //     handler: '@/server/application.js',
-  //   },
-  // ],
+  serverMiddleware: [
+    {
+      path: '/school-project/api',
+      handler: '@/server/application.js',
+    },
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
