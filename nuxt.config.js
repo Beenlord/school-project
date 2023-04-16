@@ -47,7 +47,7 @@ export default {
   // Обработчики на стороне сервера
   serverMiddleware: [
     {
-      path: '/school-project/api',
+      path: '/application-api',
       handler: '@/server/application.js',
     },
   ],
