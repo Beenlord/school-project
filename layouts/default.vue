@@ -1,16 +1,19 @@
 <template>
 	<div class="DefaultLayout">
-		<Nuxt />
+		<Navbar>
+			<Nuxt />
+		</Navbar>
 		<Icons />
-		<Preloader />
 	</div>
 </template>
 
 <script>
 import Icons from '@/components/dynamic/Icons.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default {
   components: {
+		Navbar,
     Icons,
   },
   data: () => {
@@ -22,5 +25,7 @@ export default {
 
 <style lang="scss">
 .DefaultLayout {
+	height: 100dvh;
+	height: 100vh;
 }
 </style>

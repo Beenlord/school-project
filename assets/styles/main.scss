@@ -1,7 +1,24 @@
+@import "extends/normalize";
+@import "variables/font";
+@import "variables/color";
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+html {
+	font-family: var(--ff-main);
+	font-weight: var(--fw-main);
+}
 
+html,
+body {
+}
+
+body {
+	font-size: 8px;
+	background: #efefef;
+	color: #333333;
+}

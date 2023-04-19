@@ -27,7 +27,7 @@ export default {
   ],
 
   // Auto import components.
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended)
   buildModules: [
