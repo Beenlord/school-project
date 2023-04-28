@@ -5,7 +5,6 @@
 				<Button icon="bell" />
 			</template>
 		</Header>
-		<div class="page__content"></div>
 	</div>
 </template>
 
@@ -15,7 +14,7 @@ import defaultMixin from '@/mixins/default.js';
 
 export default {
 	mixins: [
-		defaultMixin('Главная страница'),
+		defaultMixin('Главная'),
 	],
 	mounted() {
 	},

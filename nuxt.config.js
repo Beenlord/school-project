@@ -47,7 +47,7 @@ export default {
   // Обработчики на стороне сервера
   serverMiddleware: [
     {
-      path: '/application-api',
+      path: '/frontend-api',
       handler: '@/server/application.js',
     },
   ],
