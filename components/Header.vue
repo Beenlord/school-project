@@ -1,16 +1,36 @@
 <template>
 	<div class="Header">
-
+		<h1 class="Header__page-title" v-html="pageTitle"></h1>
+		<div class="Header__middle-content">
+			<slot name="middle-content"></slot>
+		</div>
+		<div class="Header__right-content">
+			<slot name="right-content"></slot>
+		</div>
 	</div>
 </template>
 
+<script>
+
+export default {
+	props: {
+		pageTitle: {
+			type: String,
+			default: '<Название страницы>',
+		},
+	},
+};
+</script>
+
 <style lang="scss">
+@import "@/assets/styles/variables/extends.scss";
+
 .Header {
 	min-height: var(--std-header);
-	padding: 1rem;
-	display: grid;
-	grid-template-columns: 3fr 1fr;
+	padding: var(--std-gap) 3rem;
 
-	background: var(--clr-light-gray);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 </style>

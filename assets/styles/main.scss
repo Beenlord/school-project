@@ -20,3 +20,10 @@ body {
 	background: var(--clr-gray);
 	color: var(--clr-text);
 }
+
+h1, h2, h3 {
+	font-size: 2rem;
+	font-weight: var(--fw-bold);
+}
+
+@import "page";

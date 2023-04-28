@@ -1,0 +1,14 @@
+.page {
+	height: 100vh;
+	height: 100dvh;
+	font-size: 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+
+	&__content {
+		flex-grow: 1;
+		margin-top: 2rem;
+		//overflow-y: scroll;
+	}
+}

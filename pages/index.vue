@@ -1,20 +1,23 @@
 <template>
   <div class="page IndexPage">
-		<Header />
+		<Header :page-title="pageTitle">
+			<template #right-content>
+				<Button icon="bell" />
+			</template>
+		</Header>
+		<div class="page__content"></div>
 	</div>
 </template>
 
 
 <script>
-import commonMixin from '@/mixins/common.js';
-import Header from '@/components/Header.vue';
+import defaultMixin from '@/mixins/default.js';
 
 export default {
-  mixins: [
-    commonMixin(),
-  ],
-	components: {
-		Header,
+	mixins: [
+		defaultMixin('Главная страница'),
+	],
+	mounted() {
 	},
 }
 </script>

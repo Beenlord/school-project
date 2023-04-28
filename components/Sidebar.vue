@@ -38,6 +38,8 @@
 	justify-content: space-between;
 	gap: var(--std-gap);
 
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
 	&__cell {
 		min-height: calc(var(--std-menu) - var(--std-gap) * 2);
 
