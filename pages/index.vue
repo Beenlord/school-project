@@ -1,16 +1,21 @@
 <template>
-  <b-container class="IndexPage">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis perferendis reiciendis voluptatibus.</p>
-	</b-container>
+  <div class="page IndexPage">
+		<Header />
+	</div>
 </template>
+
 
 <script>
 import commonMixin from '@/mixins/common.js';
+import Header from '@/components/Header.vue';
 
 export default {
   mixins: [
     commonMixin(),
   ],
+	components: {
+		Header,
+	},
 }
 </script>
 

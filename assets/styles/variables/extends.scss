@@ -1,0 +1,8 @@
+.d-flex {
+	display: flex;
+}
+
+.d-column-flex {
+	@extend .d-flex;
+	flex-direction: column;
+}

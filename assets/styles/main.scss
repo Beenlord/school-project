@@ -1,6 +1,7 @@
 @import "extends/normalize";
 @import "variables/font";
 @import "variables/color";
+@import "variables/vars";
 
 * {
   box-sizing: border-box;
@@ -15,10 +16,7 @@ html {
 
 html,
 body {
-}
-
-body {
-	font-size: 8px;
-	background: #efefef;
-	color: #333333;
+	font-size: var(--index);
+	background: var(--clr-gray);
+	color: var(--clr-text);
 }

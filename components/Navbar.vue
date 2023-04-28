@@ -3,17 +3,17 @@
 		<div class="Navbar__menu menu">
 			<div class="menu__list menu__list_first">
 				<div class="menu__item">
-					<Icon class="menu__item-icon" id="ico-account" />
+					<Icon class="menu__item-icon" id="ico-settings" color="red" />
 					<div class="menu__item-legend">Текст легенды</div>
 				</div>
 				<div class="menu__item">
-					<Icon class="menu__item-icon" id="ico-add-account" />
+					<Icon class="menu__item-icon" id="test" />
 					<div class="menu__item-legend">Текст легенды</div>
 				</div>
 			</div>
 			<div class="menu__list menu__list_middle">
 				<div class="menu__item">
-					<Icon class="menu__item-icon" id="ico-paper" />
+					<Icon class="menu__item-icon" id="ico-settings" />
 					<div class="menu__item-legend">Текст легенды</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 					<div class="menu__item-legend">Текст легенды</div>
 				</div>
 				<div class="menu__item">
-					<Icon class="menu__item-icon" id="ico-logout" />
+					<Icon class="menu__item-icon" id="ico-settings" color="red" />
 					<div class="menu__item-legend">Текст легенды</div>
 				</div>
 			</div>
@@ -53,6 +53,7 @@ export default {
 		padding: 1rem 0;
 		display: grid;
 		grid-template-rows: 1fr 1fr 1fr;
+		background-color: var(--clr-dark-gray);
 
 		&__list {
 			flex-grow: 1;
@@ -70,8 +71,8 @@ export default {
 			}
 		}
 		&__item {
-			width: 3rem;
-			height: 3rem;
+			width: 6rem;
+			height: 6rem;
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -79,23 +80,24 @@ export default {
 			border-radius: 1rem;
 
 			&-icon {
-				width: 1.5rem !important;
-				height: 1.5rem !important;
-				color: #FFDDD6;
+				width: 3rem !important;
+				height: 3rem !important;
 			}
 
 			&-legend {
 				position: absolute;
 				top: 50%; left: calc(100% + 3rem);
 				transform: translateY(-50%);
-				font-size: 1rem;
+				font-size: 2rem;
 				white-space: nowrap;
+				text-shadow: 0 .1rem 0.5em rgba(0, 0, 0, 0.5);
 				pointer-events: none;
+				user-select: none;
 				opacity: 0;
 			}
 
 			&:hover {
-				background: #FF887B;
+				background: rgba(0, 0, 0, 0.1);
 				cursor: pointer;
 
 				.menu__item-legend {
@@ -106,8 +108,7 @@ export default {
 	}
 
 	&__menu {
-		width: 5rem;
-		background: #FF5A49;
+		min-width: var(--std-menu);
 	}
 
 	&__content {

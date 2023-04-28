@@ -1,19 +1,20 @@
 <template>
 	<div class="DefaultLayout">
-		<Navbar>
+		<Sidebar class="DefaultLayout__sidebar" />
+		<div class="DefaultLayout__main">
 			<Nuxt />
-		</Navbar>
+		</div>
 		<Icons />
 	</div>
 </template>
 
 <script>
 import Icons from '@/components/dynamic/Icons.vue';
-import Navbar from '@/components/Navbar.vue';
+import Sidebar from '@/components/Sidebar.vue';
 
 export default {
   components: {
-		Navbar,
+		Sidebar,
     Icons,
   },
   data: () => {
@@ -25,7 +26,18 @@ export default {
 
 <style lang="scss">
 .DefaultLayout {
-	height: 100dvh;
-	height: 100vh;
+	display: flex;
+
+	&__sidebar,
+	&__main {
+		height: 100vh;
+		height: 100dvh;
+	}
+
+	&__main {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
 }
 </style>
