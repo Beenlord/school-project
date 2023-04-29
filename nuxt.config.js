@@ -54,8 +54,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-		// 'bootstrap-vue/nuxt',
+		'@nuxtjs/axios',
   ],
+
+	axios: {
+		baseURL: '/frontend-api',
+	},
 
   build: {
     splitChunks: {

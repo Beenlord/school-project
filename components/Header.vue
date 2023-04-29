@@ -1,6 +1,6 @@
 <template>
 	<div class="Header">
-		<h1 class="Header__page-title" v-html="pageTitle"></h1>
+		<h1 class="Header__page-title" v-html="title"></h1>
 		<div class="Header__middle-content">
 			<slot name="middle-content"></slot>
 		</div>
@@ -14,7 +14,7 @@
 
 export default {
 	props: {
-		pageTitle: {
+		title: {
 			type: String,
 			default: '<Название страницы>',
 		},
@@ -27,10 +27,16 @@ export default {
 
 .Header {
 	min-height: var(--std-header);
-	padding: var(--std-gap) 3rem;
+	padding: var(--std-gap) 2rem;
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	&__right-content,
+	&__middle-content {
+		display: flex;
+		gap: var(--std-gap);
+	}
 }
 </style>

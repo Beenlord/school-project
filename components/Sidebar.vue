@@ -1,24 +1,24 @@
 <template>
 	<div class="Sidebar">
-		<div class="Sidebar__cell">
+		<NuxtLink class="Sidebar__cell" to="/account">
 			<Icon id="account" />
-		</div>
+		</NuxtLink>
 		<div class="Sidebar__inner-content">
 			<div class="Sidebar__cell-group">
-				<div class="Sidebar__cell">
+				<NuxtLink class="Sidebar__cell" to="/search">
 					<Icon id="search" />
-				</div>
-				<div class="Sidebar__cell">
+				</NuxtLink>
+				<NuxtLink class="Sidebar__cell" to="/">
 					<Icon id="home" />
-				</div>
-				<div class="Sidebar__cell">
+				</NuxtLink>
+				<NuxtLink class="Sidebar__cell" to="/schedule">
 					<Icon id="calendar" />
-				</div>
+				</NuxtLink>
 			</div>
 			<div class="Sidebar__cell-group">
-				<div class="Sidebar__cell">
+				<NuxtLink class="Sidebar__cell" to="/settings">
 					<Icon id="settings" />
-				</div>
+				</NuxtLink>
 				<div class="Sidebar__cell">
 					<Icon id="logout" />
 				</div>
@@ -26,6 +26,17 @@
 		</div>
 	</div>
 </template>
+
+<script>
+
+export default {
+	methods: {
+		checkoutPage(uri) {
+			this.$router.push(uri);
+		},
+	},
+};
+</script>
 
 <style lang="scss">
 @import "@/assets/styles/variables/extends.scss";
@@ -55,8 +66,12 @@
 			height: 3rem !important;
 		}
 
-		&:hover {
+		&.nuxt-link-exact-active {
 			background: rgba(0, 0, 0, 0.1);
+		}
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
 		}
 	}
 

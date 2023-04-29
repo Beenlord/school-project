@@ -6,17 +6,27 @@ const { open } = require('sqlite');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get('/', function (req, res) {
-  res.send({
-    data: 'data',
-  });
-	open({
-		filename: 'static/database.db',
+
+app.get('/', async (req, res) => {
+	// Получим общую информацию о приложении
+	res.send({
+		testInfo: 000,
+	});
+
+	res.end();
+});
+
+app.get('/get-user', async (req, res) => {
+
+	const db = await open({
+		filename: './database/main.db',
 		driver: sqlite3.Database
-	}).then( async (db) =>  {
-		console.log(await db.get('SELECT * FROM users WHERE id=1'));
-		// do your thing
-	})
+	});
+
+	// const data = await db.all('SELECT * FROM users');
+	res.send({
+	});
+
 	res.end();
 });
 
