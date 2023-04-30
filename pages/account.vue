@@ -2,7 +2,9 @@
 	<div class="page AccountPage">
 		<Header :title="pageTitle">
 			<template #right-content>
-				<Button icon="bell" />
+				<Button icon="bell" @click.native="$store.commit('counter/inc')" >
+					<span>{{ $store.state.counter.value }}</span>
+				</Button>
 				<Button icon="logout" />
 			</template>
 		</Header>

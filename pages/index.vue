@@ -1,15 +1,14 @@
 <template>
   <div class="page IndexPage">
-		<Header :title="pageTitle">
+		<Header :title="$store.state.users.counter">
 			<template #right-content>
-				<Button icon="bell" />
+				<Button icon="bell" @click.native="$store.commit('counter/inc')" >
+					<span>{{ $store.state.counter.value }}</span>
+				</Button>
 			</template>
 		</Header>
 		<div class="page__content">
 			<div class="page__main">
-				<Banner title="Вводная информация">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dolorem, eius ipsa ipsum maiores quos totam. Debitis dignissimos dolorem ea eum libero, mollitia optio quae quas soluta temporibus velit voluptates? Dignissimos.</p>
-				</Banner>
 			</div>
 			<div class="page__aside">
 			</div>

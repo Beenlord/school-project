@@ -17,10 +17,9 @@ export default {
 		Sidebar,
     Icons,
   },
-  data: () => {
-    return {
-    };
-  }
+	mounted() {
+
+	},
 };
 </script>
 
