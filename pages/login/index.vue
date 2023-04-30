@@ -17,7 +17,11 @@
 				/>
 			</div>
 			<div class="form__control">
-				<Input icon="login" cursor="pointer">Войти</Input>
+				<Input
+					icon="login"
+					cursor="pointer"
+					@click.native="sendValues()"
+				>Войти</Input>
 			</div>
 		</div>
 	</div>
@@ -40,16 +44,20 @@ export default {
 	},
 	data() {
 		return {
-			login: null,
-			password: null,
+			auth: {
+				login: null,
+				password: null,
+			},
 		};
 	},
 	methods: {
 		setValue(fieldType, value) {
-			this[fieldType] = value;
+			this.auth[fieldType] = value;
 		},
 		sendValues() {
-			console.log(this.login, this.password);
+			if (this.auth.login && this.auth.password) {
+				this.$store.dispatch('user/login', this.auth);
+			}
 		},
 	},
 }

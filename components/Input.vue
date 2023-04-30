@@ -44,6 +44,15 @@ export default {
 			value: null,
 		};
 	},
+	watch: {
+		value: {
+			handler(value, oldValue) {
+				if (value !== oldValue) {
+					this.$emit('change', value);
+				}
+			},
+		},
+	},
 };
 </script>
 

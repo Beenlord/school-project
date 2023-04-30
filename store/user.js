@@ -1,4 +1,4 @@
-import axios from '@nuxtjs/axios';
+import axios from 'axios';
 
 export const state = () => ({
 	token: null,
@@ -8,13 +8,15 @@ export const state = () => ({
 });
 
 export const actions = {
-	login: async (ctx, login, password) => {
+	login: async (ctx, auth) => {
 		try {
-			const { data } = await axios.post('/login', {
-				login,
-				password,
+			const { data } = await axios.post('/frontend-api/login', {
+				login: auth.login,
+				password: auth.password,
 			});
-			if ( data?.token ) ctx.commit('user/setUser', data);
+			if ( data?.status ) ctx.commit('user/setUser', data);
+
+			console.log(data);
 		} catch (err) {
 			console.log('Ошибка авторизации:', err);
 		}
