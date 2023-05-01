@@ -8,7 +8,7 @@ function commonMixin(opt = {}) {
 		layout: opt.layout,
 		head() {
 			return {
-				title: `${opt.title} - ${process.env.PROJECTNAME}`,
+				title: `${opt.title}`,
 			};
 		},
   };

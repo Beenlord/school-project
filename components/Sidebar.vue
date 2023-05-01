@@ -19,7 +19,7 @@
 				<NuxtLink class="Sidebar__cell" to="/settings">
 					<Icon id="settings" />
 				</NuxtLink>
-				<div class="Sidebar__cell">
+				<div class="Sidebar__cell" @click="onLogout()">
 					<Icon id="logout" />
 				</div>
 			</div>
@@ -31,8 +31,10 @@
 
 export default {
 	methods: {
-		checkoutPage(uri) {
-			this.$router.push(uri);
+		onLogout() {
+			this.$store.dispatch('user/logout').then(() => {
+				this.$router.push('/login');
+			});
 		},
 	},
 };

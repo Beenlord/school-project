@@ -1,10 +1,8 @@
 <template>
   <div class="page IndexPage">
-		<Header :title="$store.state.users.counter">
+		<Header :title="$store.state.user.name">
 			<template #right-content>
-				<Button icon="bell" @click.native="$store.commit('counter/inc')" >
-					<span>{{ $store.state.counter.value }}</span>
-				</Button>
+				<Input icon="login" @click.native="$store.dispatch('user/login')"></Input>
 			</template>
 		</Header>
 		<div class="page__content">
@@ -19,12 +17,14 @@
 <script>
 import defaultMixin from '@/mixins/default.js';
 import Banner from '@/components/Banner.vue';
+import Input from "~/components/Input.vue";
 
 export default {
 	mixins: [
 		defaultMixin('Главная'),
 	],
 	components: {
+		Input,
 		Banner,
 	},
 }

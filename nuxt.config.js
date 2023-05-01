@@ -1,5 +1,10 @@
 // noinspection JSLastCommaInArrayLiteral,JSLastCommaInObjectLiteral
 export default {
+
+	router: {
+		middleware: 'authenticated',
+	},
+
   head: {
     title: 'SCH Project',
     htmlAttrs: {

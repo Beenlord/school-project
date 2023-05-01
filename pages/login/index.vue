@@ -50,6 +50,19 @@ export default {
 			},
 		};
 	},
+	watch: {
+		'$store.state.user.token': {
+			handler(value) {
+				if (value !== null) {
+					this.$router.push('/');
+				}
+			},
+			immediate: true,
+		},
+	},
+	mounted() {
+		this.$store.dispatch('user/login');
+	},
 	methods: {
 		setValue(fieldType, value) {
 			this.auth[fieldType] = value;
