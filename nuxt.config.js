@@ -30,7 +30,7 @@ export default {
   plugins: [
     '@/plugins/common',
 		{
-			src: '@/plugins/sockets',
+			src: '@/plugins/socket',
 			ssr: false,
 		}
   ],
@@ -64,7 +64,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
 		'@nuxtjs/axios',
-		'@/modules/sockets',
+		'@/modules/socket',
   ],
 
 	axios: {
