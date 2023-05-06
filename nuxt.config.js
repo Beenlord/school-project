@@ -28,7 +28,11 @@ export default {
   // Можно указать локальные плагины, которые
   // будут вызываться при запуске.
   plugins: [
-    '@/plugins/common'
+    '@/plugins/common',
+		{
+			src: '@/plugins/sockets',
+			ssr: false,
+		}
   ],
 
   // Auto import components.
@@ -60,6 +64,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
 		'@nuxtjs/axios',
+		'@/modules/sockets',
   ],
 
 	axios: {
