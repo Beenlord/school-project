@@ -28,8 +28,8 @@ export default {
 		Banner,
 	},
 	sockets: {
-		customEmit(val) {
-			console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)');
+		dbConnected(val) {
+			console.log(val);
 		}
 	},
 }

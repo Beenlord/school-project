@@ -1,7 +1,7 @@
-export default function ({ store, redirect }) {
+export default function({ app, store, redirect }) {
+	const token = app.$cookies.get('token');
 
 	// If the user is not authenticated
-	if ( !store.state.user.token ) {
-		return redirect('/login');
-	}
+	if (token === undefined) return redirect('/login');
+	return store.dispatch('user/user_token_login', token);
 }

@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 import commonMixin from '@/mixins/common.js';
 import Input from '@/components/Input.vue';
 import Button from '@/components/Button.vue';
@@ -51,27 +52,36 @@ export default {
 		};
 	},
 	watch: {
-		'$store.state.user.token': {
-			handler(value) {
-				if (value !== null) {
-					this.$router.push('/');
-				}
-			},
-			immediate: true,
+	},
+	sockets: {
+		connect() {
+			if (!this.getSocketStatus) {
+				this.$cookies.set('test-cookies', 'test value');
+				this.setSocketStatus(true);
+			}
 		},
 	},
-	mounted() {
-		this.$store.dispatch('user/login');
+	computed: {
+
+		...mapGetters({
+			getSocketStatus: 'socket/get_status',
+		}),
 	},
 	methods: {
 		setValue(fieldType, value) {
 			this.auth[fieldType] = value;
 		},
 		sendValues() {
-			if (this.auth.login && this.auth.password) {
-				this.$store.dispatch('user/login', this.auth);
+			if (this.getSocketStatus) {
+				if (this.auth.login && this.auth.password) {
+					this.$socket.client.emit('user_auth_request', this.auth);
+				}
 			}
 		},
+
+		...mapMutations({
+			setSocketStatus: 'socket/SET_STATUS',
+		}),
 	},
 }
 </script>

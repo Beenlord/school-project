@@ -65,6 +65,7 @@ export default {
   modules: [
 		'@nuxtjs/axios',
 		'@/modules/socket',
+		'cookie-universal-nuxt',
   ],
 
 	axios: {
