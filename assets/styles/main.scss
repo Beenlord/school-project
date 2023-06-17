@@ -12,19 +12,18 @@
 
 html {
 	font-family: var(--ff-main);
-	font-weight: var(--fw-main);
+	font-weight: 400;
 }
 
 html,
 body {
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
 	font-size: var(--index);
-	background: var(--clr-gray);
-	color: var(--clr-text);
+	color: var(--clr-black-gray);
+	overflow: hidden;
 }
 
-h1, h2, h3 {
-	font-size: 2rem;
-	font-weight: var(--fw-bold);
-}
-
-@import "page";
+@import 'default';
+@import 'layouts/default-page';

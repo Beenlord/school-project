@@ -1,5 +1,4 @@
 import commonMixin from '@/mixins/common.js';
-import Header from '@/components/Header.vue';
 
 function defaultMixin(title) {
 	return {
@@ -9,7 +8,6 @@ function defaultMixin(title) {
 			}),
 		],
 		components: {
-			Header,
 		},
 		data() {
 			return {

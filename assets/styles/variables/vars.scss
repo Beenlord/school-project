@@ -1,9 +1,8 @@
 :root {
 	--index: 8px; // 1rem
 
-	--std-gap: 1rem;
-	--std-menu: 8rem;
-	--std-header: var(--std-menu);
+	--grid-main: 900px;
+	--grid-padding: 48px;
 
 	--border-radius: 1.25rem;
 	--box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);

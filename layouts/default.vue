@@ -1,8 +1,8 @@
 <template>
-	<div class="DefaultLayout">
-		<Sidebar class="DefaultLayout__sidebar" />
-		<div class="DefaultLayout__main">
-			<Nuxt />
+	<div class="default-layout">
+		<div class="default-layout__content">
+			<Sidebar class="default-layout__sidebar" />
+			<Nuxt class="default-layout__page" />
 		</div>
 		<Icons />
 	</div>
@@ -10,32 +10,30 @@
 
 <script>
 import Icons from '@/components/dynamic/Icons.vue';
-import Sidebar from '@/components/Sidebar.vue';
+import Sidebar from '@/components/partial/Sidebar.vue';
 
 export default {
 	components: {
-		Sidebar,
     Icons,
+		Sidebar,
   },
-	mounted() {
-	},
 };
 </script>
 
 <style lang="scss">
-.DefaultLayout {
-	display: flex;
-
-	&__sidebar,
-	&__main {
+.default-layout {
+	width: 100%;
+	position: relative;
+	top: 0; left: 0;
+	.default-layout__content {
+		width: 100%;
 		height: 100vh;
-		height: 100dvh;
-	}
-
-	&__main {
-		flex-grow: 1;
+		position: absolute;
+		top: 0; left: 0;
 		display: flex;
-		flex-direction: column;
+		.default-layout__page {
+			flex-grow: 1;
+		}
 	}
 }
 </style>

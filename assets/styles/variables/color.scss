@@ -1,16 +1,14 @@
 :root {
-	--clr-white: #FFFFFF;
-	--clr-light-gray: #F6F6F6;
-	--clr-dark-gray: #EBEBEB;
+	--clr-white				: #FFFFFF;
+	--clr-black				: #000000;
+	--clr-accent			: #5D21D2;
+	--clr-light-gray	: #F5F7FB;
+	--clr-dark-gray		: #81878E;
+	--clr-black-gray	: #61656A;
 
-	--clr-black: #000000;
-	--clr-light-black: #3D3D3D;
-	--clr-dark-black: #222222;
-
-	--clr-green: #364838;
-	--clr-brown: #A45826;
-	--clr-orange: #C08937;
-	--clr-beige: #E5E5D9;
-
-	--clr-text: var(--clr-dark-black);
+	// Информационные цвета
+	--clr-green				: #364838;
+	--clr-brown				: #A45826;
+	--clr-orange			: #C08937;
+	--clr-beige				: #E5E5D9;
 }

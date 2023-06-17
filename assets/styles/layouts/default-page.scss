@@ -1,0 +1,18 @@
+.default-page {
+	height: 100%;
+	font-size: var(--fs-main);
+	background: var(--clr-light-gray);
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	.default-page__header {
+		position: sticky;
+		top: 0;
+	}
+
+	.default-page__content {
+		max-width: var(--grid-main);
+		padding: 0 var(--grid-padding);
+		margin: 0 auto;
+	}
+}

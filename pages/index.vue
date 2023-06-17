@@ -1,41 +1,26 @@
 <template>
-  <div class="page IndexPage">
-		<Header :title="$store.state.user.name">
-			<template #right-content>
-				<Input icon="login" @click.native="$store.dispatch('user/login')"></Input>
-			</template>
-		</Header>
-		<div class="page__content">
-			<div class="page__main">
-			</div>
-			<div class="page__aside">
-			</div>
+  <div class="default-page index-default-page">
+		<Header class="default-page__header" />
+		<div class="default-page__content">
 		</div>
 	</div>
 </template>
 
 <script>
 import defaultMixin from '@/mixins/default.js';
-import Banner from '@/components/Banner.vue';
-import Input from "~/components/Input.vue";
+import Header from '@/components/partial/Header.vue';
 
 export default {
 	mixins: [
 		defaultMixin('Главная'),
 	],
 	components: {
-		Input,
-		Banner,
-	},
-	sockets: {
-		dbConnected(val) {
-			console.log(val);
-		}
+		Header,
 	},
 }
 </script>
 
 <style lang="scss">
-.IndexPage {
+.index-default-page {
 }
 </style>
